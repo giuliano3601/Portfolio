@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giuliano Dall’Agata — Portfolio</title>
+  <style>
+    :root { --bg:#0b0c10; --card:#111218; --text:#e9e9ef; --muted:#b6b6c6; --accent:#7aa2ff; --line:#23243a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+           background:var(--bg); color:var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    header { display:flex; gap:18px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
+    .title h1 { margin:0; font-size: 28px; letter-spacing: .2px; }
+    .title p { margin:8px 0 0; color:var(--muted); max-width: 70ch; line-height:1.45; }
+    .pillrow { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .pill { border:1px solid var(--line); background:transparent; color:var(--muted);
+            padding:6px 10px; border-radius:999px; font-size: 13px; }
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:14px; margin-top:22px; }
+    .card { grid-column: span 12; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; }
+    @media (min-width: 820px){ .card.half{ grid-column: span 6; } }
+    h2 { margin:0 0 10px; font-size:18px; }
+    h3 { margin:16px 0 8px; font-size:15px; color:var(--text); }
+    .muted { color: var(--muted); }
+    ul { margin: 8px 0 0 18px; color: var(--muted); line-height: 1.5; }
+    .links { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+    .kpi { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .kpi span { font-size: 12.5px; border:1px solid var(--line); border-radius: 10px; padding:6px 10px; color: var(--muted); }
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
+    .hr { height:1px; background: var(--line); margin: 18px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Giuliano Alessandro Dall’Agata</h1>
+        <p>
+          Ingeniería Industrial orientada a <b>sistemas</b>, <b>modelado</b>, <b>simulación</b> y <b>decisiones bajo restricciones reales</b>.
+          Me gusta convertir operaciones sin datos en líneas base medibles y propuestas defendibles.
+        </p>
+        <div class="pillrow">
+          <span class="pill">Simulación (DES / escenarios)</span>
+          <span class="pill">Métodos y tiempos</span>
+          <span class="pill">Optimización (metaheurísticas)</span>
+          <span class="pill">Operaciones & logística</span>
+          <span class="pill">Documentación técnica usable</span>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="CV PDF">CV (PDF)</a>
+        <a href="mailto:tuemail@ejemplo.com">Email</a>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <section class="card">
+        <h2>Proyectos destacados</h2>
+        <p class="muted">Casos reales. Enfoque en trade-offs, capacidad y robustez operativa.</p>
+      </section>
+
+      <!-- PROYECTO 1 -->
+      <article class="card half">
+        <h2>Depósito de producto terminado — Diagnóstico + mejoras</h2>
+        <p class="muted">
+          La Mariposa S.A. (Tucumán). Relevamiento end-to-end, estudio de métodos y tiempos, diagnóstico de horas extra y cuellos.
+        </p>
+
+        <h3>Qué hice</h3>
+        <ul>
+          <li>Mapeo de procesos (recepción, picking, pallets cerrados, envoltura, despacho, control de stock).</li>
+          <li>Medición y normalización de tiempos; suplementos; análisis de utilización de equipos.</li>
+          <li>Propuestas operativas + roadmap mediano/largo (automatización y diseño de depósito).</li>
+        </ul>
+
+        <div class="kpi">
+          <span>KPIs: horas extra / capacidad / ocupación</span>
+          <span>Herramientas: muestreo, tiempos estándar</span>
+          <span>Entrega: informe empresarial</span>
+        </div>
+
+        <div class="links">
+          <a href="./assets/informe-lm.pdf">Leer informe (PDF)</a>
+          <a href="./assets/figuras-deposito.png">Figuras/diagramas</a>
+        </div>
+      </article>
+
+      <!-- PROYECTO 2 -->
+      <article class="card half">
+        <h2>Modelo de simulación — Armado y despacho (con backlog)</h2>
+        <p class="muted">
+          Simulación por jornadas completas, interacción armado↔despacho por recursos compartidos, y arrastre de trabajo pendiente entre días.
+        </p>
+
+        <h3>Qué modelé</h3>
+        <ul>
+          <li>Carga diaria desde histórico real de arribos de camiones.</li>
+          <li>Procesos concurrentes (armado y despacho) con reducción de capacidad durante despachos.</li>
+          <li>Variabilidad vía distribuciones empíricas y escenarios comparables.</li>
+        </ul>
+
+        <div class="kpi">
+          <span>Unidad: día completo</span>
+          <span>Salida: horas extra / atraso / capacidad</span>
+          <span>Extras: optimización (recocido simulado)</span>
+        </div>
+
+        <div class="links">
+          <a href="./assets/tesis-borrador.pdf">Borrador / anexos (PDF)</a>
+          <a href="https://github.com/tuusuario/tu-repo">Scripts (GitHub)</a>
+        </div>
+      </article>
+
+      <section class="card">
+        <h2>Sobre mí (versión útil para contratar)</h2>
+        <p class="muted">
+          Me asignan áreas “sin datos” y construyo una base medible: proceso end-to-end, línea base, cuellos y escenarios.
+          Lo importante: no documento por documentar; documento para habilitar decisiones.
+        </p>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="hr"></div>
+      <div>© <span id="y"></span> — Hecho con HTML simple (sin frameworks) para GitHub Pages.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
