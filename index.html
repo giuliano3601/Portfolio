@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Giuliano Dall’Agata — Portfolio</title>
+  <title>Giuliano Dall’Agata - Portfolio</title>
   <style>
     :root { --bg:#0b0c10; --card:#111218; --text:#e9e9ef; --muted:#b6b6c6; --accent:#7aa2ff; --line:#23243a; }
     * { box-sizing: border-box; }
@@ -34,63 +34,69 @@
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="title">
-        <h1>Giuliano Alessandro Dall’Agata</h1>
-        <p>
-          Ingeniería Industrial orientada a <b>sistemas</b>, <b>modelado</b>, <b>simulación</b> y <b>decisiones bajo restricciones reales</b>.
-          Me gusta convertir operaciones sin datos en líneas base medibles y propuestas defendibles.
-        </p>
-        <div class="pillrow">
-          <span class="pill">Simulación (DES / escenarios)</span>
-          <span class="pill">Métodos y tiempos</span>
-          <span class="pill">Optimización (metaheurísticas)</span>
-          <span class="pill">Operaciones & logística</span>
-          <span class="pill">Documentación técnica usable</span>
-        </div>
-      </div>
+   <header>
+  <div class="title">
+    <h1>Giuliano Alessandro Dall’Agata</h1>
+    <p>
+      Ingeniero Industrial enfocado en entender cómo funciona y mejorar el trabajo real dentro de una organización.
+      Me dedico a ordenar procesos, medir lo que pasa en el día a día y ayudar a tomar mejores decisiones y estandarizar
+      cuando aparecen atrasos, horas extra o desorden.
+    </p>
+    <div class="pillrow">
+      <span class="pill">Organización del trabajo</span>
+      <span class="pill">Tiempos y métodos</span>
+      <span class="pill">Operaciones reales</span>
+      <span class="pill">Logística y depósitos</span>
+      <span class="pill">Análisis para decidir</span>
+    </div>
+  </div>
 
-      <div class="links">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="GitHub">GitHub</a>
-        <a href="#" aria-label="CV PDF">CV (PDF)</a>
-        <a href="mailto:tuemail@ejemplo.com">Email</a>
-      </div>
-    </header>
+  <div class="links">
+    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    <a href="#" aria-label="GitHub">GitHub</a>
+    <a href="./assets/cv-giuliano-dallagata.pdf" aria-label="CV PDF">CV (PDF)</a>
+    <a href="mailto:tuemail@ejemplo.com">Email</a>
+  </div>
+</header>
 
-    <div class="grid">
+<div class="grid">
 
-      <section class="card">
-        <h2>Proyectos destacados</h2>
-        <p class="muted">Casos reales. Enfoque en trade-offs, capacidad y robustez operativa.</p>
-      </section>
+  <section class="card">
+    <h2>Proyectos destacados</h2>
+    <p class="muted">
+      Casos reales en planta y depósito. Trabajo con datos simples para entender problemas concretos
+      y mejorar la forma de organizar el trabajo.
+    </p>
+  </section>
 
-      <!-- PROYECTO 1 -->
+
+ <!-- PROYECTO 1 -->
 <article class="card half">
-  <h2>Depósito de producto terminado — Línea base + decisiones de capacidad</h2>
+  <h2>Depósito de producto terminado — orden, tiempos y horas extra</h2>
   <p class="muted">
-    La Mariposa S.A. (Tucumán). Pasantía en depósito de producto terminado: operación sin estándares formales, uso inconsistente de FIFO,
-    problemas de orden/seguridad y muchas horas extra.
+    La Mariposa S.A. (Tucumán). Pasantía en el depósito de producto terminado.
+    La operación tenía mucho trabajo manual, poco orden formal y una fuerte dependencia de horas extra para cumplir con los pedidos.
   </p>
 
-  <h3>Problema de decisión</h3>
+  <h3>El problema</h3>
   <ul>
-    <li>Planificar el trabajo del depósito con métricas confiables.</li>
-    <li>Decidir si invertir en más equipos/personal o si el problema era principalmente organizacional.</li>
+    <li>No estaba claro por qué se generaban tantas horas extra.</li>
+    <li>Las decisiones se tomaban por experiencia e intuición, sin datos concretos sobre tiempos, ritmo de trabajo o uso de equipos.</li>
+    <li>Existía la duda de si el problema era falta de recursos o una mala organización del trabajo.</li>
   </ul>
 
-  <h3>Enfoque</h3>
+  <h3>Qué hice</h3>
   <ul>
-    <li>Relevamiento end-to-end y estudio de métodos y tiempos en tareas críticas (armado, movimiento, envoltura y despacho).</li>
-    <li>Construcción de línea base (tasas, capacidad y utilización de recursos).</li>
-    <li>Modelado y simulación en Scilab por jornadas completas para analizar cuellos y escenarios comparables.</li>
+    <li>Relevé cómo se trabajaba realmente en el depósito, tarea por tarea.</li>
+    <li>Medí tiempos de armado, movimiento, envoltura y despacho.</li>
+    <li>Organicé esa información en indicadores simples para entender el funcionamiento real del área.</li>
   </ul>
 
-  <h3>Resultados e impacto</h3>
+  <h3>Qué permitió entender</h3>
   <ul>
-    <li>Línea base cuantitativa del sistema (tiempos, tasas y utilización) para reducir decisiones por intuición.</li>
-    <li>Cuantificación del impacto de propuestas de mejora sobre jornada y horas extra, incluso antes de implementar cambios.</li>
-    <li>Marco reutilizable (indicadores + modelo) para evaluar cambios futuros en dotación, layout u organización del trabajo.</li>
+    <li>Dónde se perdía tiempo y por qué la jornada se extendía más de lo esperado.</li>
+    <li>Qué problemas estaban ligados a la forma de trabajar y no a la falta de equipos.</li>
+    <li>Qué cambios organizativos tenían más impacto que sumar recursos.</li>
   </ul>
 
   <div class="links">
@@ -100,46 +106,53 @@
 
 
 
-     <!-- PROYECTO 2 -->
+  <!-- PROYECTO 2 -->
 <article class="card half">
-  <h2>Modelo de simulación del depósito — Backlog y escenarios</h2>
+  <h2>Organización del trabajo en el depósito — análisis de días críticos</h2>
   <p class="muted">
-    Extensión del diagnóstico operativo del depósito de producto terminado de La Mariposa S.A.
-    Enfoque en variabilidad diaria, recursos compartidos y trabajo pendiente entre jornadas.
+    Continuación del trabajo en el depósito de producto terminado de La Mariposa S.A.
+    Enfoque en entender qué pasa cuando el volumen diario supera lo habitual y se generan atrasos u horas extra.
   </p>
 
-  <h3>Problema de decisión</h3>
+  <h3>El problema</h3>
   <ul>
-    <li>Evaluar el comportamiento del sistema cuando la demanda diaria supera la capacidad disponible.</li>
-    <li>Comparar políticas operativas más allá de promedios estáticos.</li>
+    <li>Los tiempos promedio no explicaban por qué algunos días la jornada se extendía mucho más que otros.</li>
+    <li>Era difícil anticipar qué impacto tenía cambiar la forma de organizar el armado y el despacho.</li>
   </ul>
 
-  <h3>Enfoque</h3>
+  <h3>Cómo lo abordé</h3>
   <ul>
-    <li>Simulación discreta a nivel de jornadas completas con datos históricos reales.</li>
-    <li>Modelado conjunto de armado y despacho con reducción dinámica de capacidad.</li>
-    <li>Implementación en Scilab para análisis de escenarios comparables.</li>
+    <li>Desarrollando un modelo simple en un software del día a día del depósito, usando datos reales de trabajo.</li>
+    <li>Replicando la llegada de pedidos, el armado, los despachos y la acumulación de trabajo entre días.</li>
+    <li>Probando distintas formas de organizar el trabajo sin afectar la operación real.</li>
   </ul>
 
-  <h3>Resultados e impacto</h3>
+  <h3>Qué permitió entender</h3>
   <ul>
-    <li>Cuantificación del backlog, horas extra y duración de jornada bajo distintos escenarios.</li>
-    <li>Complemento analítico del informe empresarial para decisiones futuras bajo incertidumbre.</li>
+    <li>Por qué las horas extra aparecen incluso cuando, en promedio, la capacidad parece suficiente.</li>
+    <li>Qué cambios organizativos tienen más impacto que sumar recursos.</li>
+    <li>Cómo se comporta el depósito en días “cargados” frente a días normales.</li>
   </ul>
 
   <div class="links">
-    <a href="./assets/tesis-simulacion-borrador.pdf">Borrador de tesis / simulación (PDF)</a>
+    <a href="./assets/tesis-simulacion-borrador.pdf">Documento técnico de respaldo (PDF)</a>
   </div>
 </article>
+<section class="card">
+  <h2>Sobre mí</h2>
+  <p class="muted">
+    Me interesa entender cómo funcionan los sistemas reales dentro de una organización
+    y ayudar a tomar decisiones mejores cuando no todo está claro.
+    Trabajo cómodo en contextos imperfectos, donde hay que elegir qué medir,
+    qué simplificar y qué aceptar como incertidumbre.
+  </p>
 
-
-      <section class="card">
-        <h2>Sobre mí (versión útil para contratar)</h2>
-        <p class="muted">
-          Me asignan áreas “sin datos” y construyo una base medible: proceso end-to-end, línea base, cuellos y escenarios.
-          Lo importante: no documento por documentar; documento para habilitar decisiones.
-        </p>
-      </section>
+  <p class="muted">
+    Uso herramientas de ingeniería cuando suman valor, pero mi foco no está en la herramienta,
+    sino en el criterio: entender el problema, evaluar alternativas y diseñar soluciones
+    que puedan sostenerse en la práctica.
+  </p>
+</section>
 
     </div>
 
