@@ -97,34 +97,41 @@
     <a href="./assets/informe-deposito-la-mariposa.pdf">Informe empresarial (PDF)</a>
   </div>
 </article>
-<a href="./assets/informe-deposito-la-mariposa.pdf">
 
 
-      <!-- PROYECTO 2 -->
-      <article class="card half">
-        <h2>Modelo de simulación — Armado y despacho (con backlog)</h2>
-        <p class="muted">
-          Simulación por jornadas completas, interacción armado↔despacho por recursos compartidos, y arrastre de trabajo pendiente entre días.
-        </p>
 
-        <h3>Qué modelé</h3>
-        <ul>
-          <li>Carga diaria desde histórico real de arribos de camiones.</li>
-          <li>Procesos concurrentes (armado y despacho) con reducción de capacidad durante despachos.</li>
-          <li>Variabilidad vía distribuciones empíricas y escenarios comparables.</li>
-        </ul>
+     <!-- PROYECTO 2 -->
+<article class="card half">
+  <h2>Modelo de simulación del depósito — Backlog y escenarios</h2>
+  <p class="muted">
+    Extensión del diagnóstico operativo del depósito de producto terminado de La Mariposa S.A.
+    Enfoque en variabilidad diaria, recursos compartidos y trabajo pendiente entre jornadas.
+  </p>
 
-        <div class="kpi">
-          <span>Unidad: día completo</span>
-          <span>Salida: horas extra / atraso / capacidad</span>
-          <span>Extras: optimización (recocido simulado)</span>
-        </div>
+  <h3>Problema de decisión</h3>
+  <ul>
+    <li>Evaluar el comportamiento del sistema cuando la demanda diaria supera la capacidad disponible.</li>
+    <li>Comparar políticas operativas más allá de promedios estáticos.</li>
+  </ul>
 
-        <div class="links">
-          <a href="./assets/tesis-borrador.pdf">Borrador / anexos (PDF)</a>
-          <a href="https://github.com/tuusuario/tu-repo">Scripts (GitHub)</a>
-        </div>
-      </article>
+  <h3>Enfoque</h3>
+  <ul>
+    <li>Simulación discreta a nivel de jornadas completas con datos históricos reales.</li>
+    <li>Modelado conjunto de armado y despacho con reducción dinámica de capacidad.</li>
+    <li>Implementación en Scilab para análisis de escenarios comparables.</li>
+  </ul>
+
+  <h3>Resultados e impacto</h3>
+  <ul>
+    <li>Cuantificación del backlog, horas extra y duración de jornada bajo distintos escenarios.</li>
+    <li>Complemento analítico del informe empresarial para decisiones futuras bajo incertidumbre.</li>
+  </ul>
+
+  <div class="links">
+    <a href="./assets/tesis-simulacion-borrador.pdf">Borrador de tesis / simulación (PDF)</a>
+  </div>
+</article>
+
 
       <section class="card">
         <h2>Sobre mí (versión útil para contratar)</h2>
