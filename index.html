@@ -30,12 +30,30 @@
     .kpi span { font-size: 12.5px; border:1px solid var(--line); border-radius: 10px; padding:6px 10px; color: var(--muted); }
     footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
     .hr { height:1px; background: var(--line); margin: 18px 0; }
+    /* Foto de perfil en el header */
+.profile {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
   </style>
 </head>
 <body>
   <div class="wrap">
    <header>
-  <div class="title">
+  <div class="title profile">
+  <img src="./assets/foto-giuliano.jpg" alt="Giuliano Dall’Agata" class="avatar" />
+  <div>
     <h1>Giuliano Alessandro Dall’Agata</h1>
     <p>
       Ingeniero Industrial enfocado en entender cómo funciona y mejorar el trabajo real dentro de una organización.
@@ -50,6 +68,8 @@
       <span class="pill">Análisis para decidir</span>
     </div>
   </div>
+</div>
+
 
   <div class="links">
     <a href="./assets/cv-giuliano-dallagata.pdf" aria-label="CV PDF">CV (PDF)</a>
