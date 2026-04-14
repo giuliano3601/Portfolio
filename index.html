@@ -154,6 +154,44 @@
       text-decoration:none;
     }
 
+    .kpi-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+      margin-bottom:6px;
+    }
+
+    .kpi-chip {
+      border:1px solid var(--line);
+      background:#171925;
+      color:var(--text);
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:12.5px;
+    }
+
+    .tech-box {
+      margin-top:14px;
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#0e1016;
+    }
+
+    .tech-box strong {
+      display:block;
+      margin-bottom:6px;
+      font-size:13px;
+    }
+
+    .tech-box p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.45;
+      font-size:14px;
+    }
+
     .hr {
       height:1px;
       background: var(--line);
@@ -278,6 +316,13 @@
             organización del trabajo y balance de puestos.
           </p>
 
+          <div class="kpi-row">
+            <span class="kpi-chip">~13% de brecha de eficiencia</span>
+            <span class="kpi-chip">~25% de scrap</span>
+            <span class="kpi-chip">~40% de pérdida global</span>
+            <span class="kpi-chip">+27% a +45% de mejora potencial</span>
+          </div>
+
           <h3>El problema</h3>
           <ul>
             <li>El sector presentaba paradas no programadas, defectos de calidad y baja utilización de la capacidad instalada.</li>
@@ -293,12 +338,14 @@
             <li>Armé un informe ejecutivo orientado a decisión para jefatura y dirección.</li>
           </ul>
 
-          <h3>Resultados del diagnóstico</h3>
-          <ul>
-            <li>Brecha de eficiencia de ~13% en tiradas por turno.</li>
-            <li>Scrap cercano al 25% y pérdida global aproximada del 40% en capacidad útil.</li>
-            <li>Mejora potencial estimada del 27% al 45% en producción de velas desnudas según implementación.</li>
-          </ul>
+          <div class="tech-box">
+            <strong>Capa técnica</strong>
+            <p>
+              El trabajo combinó relevamiento en planta, análisis de capacidad, muestreo de trabajo
+              y una herramienta en Python para evaluar configuraciones operativas como 2 máquinas–1 operario
+              y 3 máquinas–1 operario, estimando capacidad, utilización y restricciones del sistema.
+            </p>
+          </div>
 
           <div class="links">
             <a href="./assets/informe-veleria-la-mariposa.pdf" target="_blank">Informe de velería (PDF)</a>
@@ -426,6 +473,13 @@
             maintenance, work organization, and line balance.
           </p>
 
+          <div class="kpi-row">
+            <span class="kpi-chip">~13% efficiency gap</span>
+            <span class="kpi-chip">~25% scrap</span>
+            <span class="kpi-chip">~40% global capacity loss</span>
+            <span class="kpi-chip">+27% to +45% improvement potential</span>
+          </div>
+
           <h3>The problem</h3>
           <ul>
             <li>The area showed unplanned downtime, quality defects, and low use of installed capacity.</li>
@@ -441,12 +495,14 @@
             <li>Prepared a management-oriented executive report to support decision-making.</li>
           </ul>
 
-          <h3>Main findings</h3>
-          <ul>
-            <li>~13% efficiency gap in cycles per shift.</li>
-            <li>Scrap close to 25% and an overall useful-capacity loss of about 40%.</li>
-            <li>Estimated production improvement potential of 27% to 45%, depending on implementation level.</li>
-          </ul>
+          <div class="tech-box">
+            <strong>Technical layer</strong>
+            <p>
+              The project combined field observation, capacity analysis, work sampling,
+              and a Python tool to evaluate machine-operator configurations such as 2 machines–1 operator
+              and 3 machines–1 operator, estimating throughput, utilization, and operational constraints.
+            </p>
+          </div>
 
           <div class="links">
             <a href="./assets/informe-veleria-la-mariposa.pdf" target="_blank">Candle production report (PDF, Spanish)</a>
@@ -499,7 +555,7 @@
 
     <footer>
       <div class="hr"></div>
-      <div>© <span id="y"></span> — Built with simple HTML for GitHub Pages.</div>
+      <div>© <span id="y"></span> — Hecho con HTML simple para GitHub Pages.</div>
     </footer>
   </div>
 
