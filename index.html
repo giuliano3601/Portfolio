@@ -41,6 +41,15 @@
     .showcase img { width:100%; display:block; border:1px solid var(--line); border-radius:10px; }
     .showcase p { margin:0; }
     @media (min-width:820px){ .showcase { grid-template-columns:minmax(0, .85fr) minmax(0, 1.15fr); } }
+    .case-library { margin-top:28px; }
+    .library-header { display:flex; gap:18px; align-items:end; justify-content:space-between; flex-wrap:wrap; margin-bottom:14px; }
+    .library-header h2 { margin:0 0 6px; }
+    .library-header p { margin:0; max-width:66ch; }
+    .folder-tabs { display:flex; gap:8px; flex-wrap:wrap; }
+    .folder-tab { border:1px solid var(--line); background:var(--card); color:var(--muted); border-radius:10px 10px 7px 7px; padding:8px 11px; cursor:pointer; font:inherit; font-size:13px; }
+    .folder-tab:hover, .folder-tab.active { color:var(--text); background:#1a1c28; border-color:var(--accent); }
+    .folder-tab.active { box-shadow:inset 0 2px 0 var(--accent); }
+    .case-card[hidden] { display:none; }
     .hr { height:1px; background:var(--line); margin:18px 0; }
     footer { margin-top:28px; color:var(--muted); font-size:13px; }
     .profile { display:flex; gap:18px; align-items:center; }
@@ -59,10 +68,11 @@
       <div class="pillrow"><span class="pill">Organización del trabajo</span><span class="pill">Tiempos y métodos</span><span class="pill">Operaciones y procesos reales</span><span class="pill">Logística</span><span class="pill">Análisis para decidir</span></div>
     </div></div></header>
 
-    <div class="grid">
-      <section class="card"><h2>Proyectos destacados</h2><p class="muted">Casos reales en planta y depósito. Trabajo con datos de campo, análisis de capacidad, simulación, automatización y propuestas concretas para entender problemas operativos y apoyar decisiones.</p></section>
+    <section class="case-library" aria-label="Biblioteca de casos">
+      <div class="library-header"><div><h2>Biblioteca de casos</h2><p class="muted">Proyectos organizados por tema. Elegí una carpeta para ver los casos sin recorrer toda la página.</p></div><div class="folder-tabs" role="tablist" aria-label="Carpetas de casos"><button class="folder-tab active" type="button" data-folder="planta">Planta y mejora</button><button class="folder-tab" type="button" data-folder="logistica">Logística y simulación</button><button class="folder-tab" type="button" data-folder="digital">Digitalización industrial</button><button class="folder-tab" type="button" data-folder="gestion">Sistemas de gestión</button></div></div>
+      <div class="grid">
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="planta">
         <h2>Depósito de producto terminado — organización, tiempos y horas extra</h2>
         <p class="muted">La Mariposa S.A. (Tucumán). Pasantía en el depósito de producto terminado. La operación combinaba trabajo manual, alta variabilidad y una fuerte dependencia de horas extra para cumplir con los despachos.</p>
         <h3>El problema</h3><ul><li>No estaba claro por qué se generaban tantas horas extra.</li><li>Las decisiones se tomaban principalmente por experiencia, sin métricas confiables sobre tiempos, ritmo y uso de recursos.</li><li>Existía la duda de si el problema era falta de recursos o una mala organización del trabajo.</li></ul>
@@ -71,7 +81,7 @@
         <div class="links"><a href="./assets/informe-deposito-la-mariposa.pdf" target="_blank">Informe empresarial (PDF)</a></div>
       </article>
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="planta">
         <h2>Velería — diagnóstico operativo y propuestas de mejora</h2>
         <p class="muted">La Mariposa S.A. (Tucumán). Estudio del sector de producción de velas para identificar pérdidas de capacidad, scrap, problemas de mezcla y oportunidades de mejora en mantenimiento, organización del trabajo y balance de puestos.</p>
         <div class="kpi-row"><span class="kpi-chip">~13% de brecha de eficiencia</span><span class="kpi-chip">~25% de scrap</span><span class="kpi-chip">~40% de pérdida global</span><span class="kpi-chip">+27% a +45% de mejora potencial</span></div>
@@ -95,7 +105,7 @@
         <div class="links"><a href="./assets/informe-veleria-la-mariposa.pdf" target="_blank">Informe de velería (PDF)</a></div>
       </article>
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="logistica" hidden>
         <h2>Proyecto de graduación — simulación y mejora del depósito</h2>
         <p class="muted">Tesis de Ingeniería Industrial centrada en el modelado del armado y despacho de pedidos, optimización del layout de picking y evaluación de propuestas mediante simulación.</p>
         <h3>Qué desarrollé</h3><ul><li>Estudio de tiempos y modelado de procesos de picking, envoltura, despacho y recepción.</li><li>Optimización del layout de picking mediante recocido simulado.</li><li>Simulación de armado y despacho para evaluar horas extra, cuellos de botella y escenarios de mejora.</li></ul>
@@ -103,7 +113,7 @@
         <div class="links"><a href="./assets/tesis-deposito.pdf" target="_blank">Proyecto de graduación (PDF)</a></div>
       </article>
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="digital" hidden>
         <h2>Automatización industrial — arquitectura IIoT con LoRaWAN</h2>
         <p class="muted">La Mariposa S.A. (Tucumán). Diseño de una arquitectura para automatizar la adquisición de datos de producción e inventarios y conectarlos con los sistemas de gestión de la empresa.</p>
         <h3>El problema</h3><ul><li>El conteo de producción, el nivel de tanques y el consumo de fluidos se registraban de forma manual.</li><li>No existía una arquitectura común para llevar datos desde la instrumentación de planta hasta el ERP.</li></ul>
@@ -112,7 +122,7 @@
         <div class="tech-box"><strong>Estado del proyecto</strong><p>Diseño y documentación de ingeniería. La arquitectura fue desarrollada y especificada, pero no llegó a desplegarse físicamente durante mi participación.</p></div>
       </article>
 
-      <article class="card">
+      <article class="card case-card" data-folder="gestion" hidden>
         <div class="showcase">
           <div><h2>Implementación integral de Odoo</h2><p class="muted">Implementación de Odoo para centralizar la gestión operativa y comercial de una empresa, conectando procesos que antes se seguían de forma dispersa.</p><h3>Alcance de la implementación</h3><ul><li>Configuración y adaptación de los módulos necesarios para acompañar el flujo de trabajo de la empresa.</li><li>Organización de proyectos, tareas, documentación, aprobaciones, compras y seguimiento comercial en un mismo sistema.</li><li>Definición de etapas y vistas para dar visibilidad al estado de cada proceso y facilitar la coordinación.</li></ul><div class="tech-box"><strong>Ejemplo mostrado</strong><p>Módulo de Proyectos: tablero Kanban para seguir el avance de una obra desde la documentación técnica y las aprobaciones hasta la preparación de compras.</p></div></div>
           <div><img src="./assets/tablero-gestion-proyectos.jpeg" alt="Módulo de Proyectos de una implementación integral de Odoo, con tablero Kanban para el seguimiento de una obra" /><div class="caption">Ejemplo de uno de los módulos configurados dentro de la implementación integral de Odoo.</div></div>
@@ -120,7 +130,8 @@
       </article>
 
       <article class="card half"><h2>Sobre mí</h2><p class="muted">Me interesa entender cómo funcionan los sistemas reales dentro de una organización y ayudar a tomar decisiones mejores cuando no todo está claro. Trabajo cómodo en contextos imperfectos, donde hay que elegir qué medir, qué simplificar y qué aceptar como incertidumbre.</p><p class="muted">Uso herramientas de ingeniería cuando suman valor, pero mi foco no está en la herramienta, sino en el criterio: entender el problema, evaluar alternativas y diseñar soluciones que puedan sostenerse en la práctica.</p></article>
-    </div>
+      </div>
+    </section>
   </div>
 
   <div id="content-en" class="lang-content">
@@ -130,10 +141,11 @@
       <div class="pillrow"><span class="pill">Work organization</span><span class="pill">Time and motion studies</span><span class="pill">Real operations and processes</span><span class="pill">Logistics</span><span class="pill">Decision-oriented analysis</span></div>
     </div></div></header>
 
-    <div class="grid">
-      <section class="card"><h2>Selected projects</h2><p class="muted">Real cases in plant and warehouse environments. I work with field data, capacity analysis, simulation, automation, and practical recommendations to understand operational problems and support decisions.</p></section>
+    <section class="case-library" aria-label="Case library">
+      <div class="library-header"><div><h2>Case library</h2><p class="muted">Projects organized by topic. Choose a folder to view relevant cases without scrolling through the whole page.</p></div><div class="folder-tabs" role="tablist" aria-label="Case folders"><button class="folder-tab active" type="button" data-folder="planta">Plant improvement</button><button class="folder-tab" type="button" data-folder="logistica">Logistics &amp; simulation</button><button class="folder-tab" type="button" data-folder="digital">Industrial digitalization</button><button class="folder-tab" type="button" data-folder="gestion">Management systems</button></div></div>
+      <div class="grid">
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="planta">
         <h2>Finished goods warehouse — organization, lead times, and overtime</h2><p class="muted">La Mariposa S.A. (Tucumán, Argentina). Internship in the finished goods warehouse. The operation combined manual work, high variability, and a strong dependence on overtime to meet dispatch requirements.</p>
         <h3>The problem</h3><ul><li>It was unclear why overtime was being generated so frequently.</li><li>Decisions were mostly based on experience, without reliable metrics on cycle times, pace, or resource use.</li><li>There was uncertainty about whether the issue was lack of resources or poor work organization.</li></ul>
         <h3>What I did</h3><ul><li>Mapped the actual workflow of the warehouse task by task.</li><li>Measured picking, movement, wrapping, and dispatch times.</li><li>Modeled operational scenarios to compare alternative ways of organizing work.</li><li>Translated the findings into simple indicators and practical recommendations for management.</li></ul>
@@ -141,7 +153,7 @@
         <div class="links"><a href="./assets/informe-deposito-la-mariposa.pdf" target="_blank">Business report (PDF, Spanish)</a></div>
       </article>
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="planta">
         <h2>Candle production area — operational diagnosis and improvement proposals</h2><p class="muted">La Mariposa S.A. (Tucumán, Argentina). Study of the candle production area to identify capacity losses, scrap, mixture-related issues, and opportunities for improvement in maintenance, work organization, and line balance.</p>
         <div class="kpi-row"><span class="kpi-chip">~13% efficiency gap</span><span class="kpi-chip">~25% scrap</span><span class="kpi-chip">~40% global capacity loss</span><span class="kpi-chip">+27% to +45% improvement potential</span></div>
         <h3>The problem</h3><ul><li>The area showed unplanned downtime, quality defects, and low use of installed capacity.</li><li>Actual production was below theoretical output and the process operated with high variability.</li><li>There was no structured data baseline or clear prioritization of actions.</li></ul>
@@ -164,14 +176,14 @@
         <div class="links"><a href="./assets/informe-veleria-la-mariposa.pdf" target="_blank">Candle production report (PDF, Spanish)</a></div>
       </article>
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="logistica" hidden>
         <h2>Graduation project — simulation and warehouse improvement</h2><p class="muted">Industrial Engineering thesis focused on order picking and dispatch modeling, picking-layout optimization, and scenario evaluation through simulation.</p>
         <h3>What I developed</h3><ul><li>Time studies and process modeling for picking, wrapping, dispatch, and inbound flow.</li><li>Picking-layout optimization through simulated annealing.</li><li>Simulation of order preparation and dispatch to evaluate overtime, bottlenecks, and improvement scenarios.</li></ul>
         <h3>Main results</h3><ul><li>Simulated 42.9% reduction in annual overtime-related cost.</li><li>Reduction of average daily overtime from 0.95 to 0.55 hours/day.</li><li>11.5% improvement in average order-preparation time per pallet.</li></ul>
         <div class="links"><a href="./assets/tesis-deposito.pdf" target="_blank">Graduation project (PDF, Spanish)</a></div>
       </article>
 
-      <article class="card half">
+      <article class="card half case-card" data-folder="digital" hidden>
         <h2>Industrial automation — IIoT architecture with LoRaWAN</h2>
         <p class="muted">La Mariposa S.A. (Tucumán, Argentina). Design of an architecture to automate production and inventory data acquisition and connect plant instrumentation with the company’s management systems.</p>
         <h3>The problem</h3><ul><li>Production counts, tank levels, and fluid consumption were recorded manually.</li><li>There was no common architecture to move data from field instrumentation to the ERP.</li></ul>
@@ -180,7 +192,7 @@
         <div class="tech-box"><strong>Project status</strong><p>Engineering design and documentation. The architecture was developed and specified, but it was not physically deployed during my participation.</p></div>
       </article>
 
-      <article class="card">
+      <article class="card case-card" data-folder="gestion" hidden>
         <div class="showcase">
           <div><h2>End-to-end Odoo implementation</h2><p class="muted">Odoo implementation to centralize a company’s operational and commercial management, connecting processes that had previously been followed separately.</p><h3>Implementation scope</h3><ul><li>Configuration and adaptation of the modules needed to support the company’s workflow.</li><li>Project, task, documentation, approval, purchasing, and commercial follow-up management in one system.</li><li>Definition of stages and views to make process status visible and improve coordination.</li></ul><div class="tech-box"><strong>Example shown</strong><p>Projects module: Kanban board to follow a construction project from technical documentation and approvals to procurement preparation.</p></div></div>
           <div><img src="./assets/tablero-gestion-proyectos.jpeg" alt="Projects module within an end-to-end Odoo implementation, showing a Kanban board for construction tracking" /><div class="caption">Example of one of the modules configured as part of the end-to-end Odoo implementation.</div></div>
@@ -188,7 +200,8 @@
       </article>
 
       <article class="card half"><h2>About me</h2><p class="muted">I am interested in understanding how real systems work inside organizations and in helping make better decisions when not everything is clear. I work comfortably in imperfect environments, where it is necessary to decide what to measure, what to simplify, and what uncertainty must be accepted.</p><p class="muted">I use engineering tools when they add value, but my focus is not the tool itself. It is judgment: understanding the problem, evaluating alternatives, and designing solutions that can actually be sustained in practice.</p></article>
-    </div>
+      </div>
+    </section>
   </div>
 
   <footer><div class="hr"></div><div>© <span id="y"></span> — Hecho con HTML simple para GitHub Pages.</div></footer>
@@ -196,6 +209,7 @@
 <script>
   const btnEs=document.getElementById("btn-es"), btnEn=document.getElementById("btn-en"), contentEs=document.getElementById("content-es"), contentEn=document.getElementById("content-en");
   function setLanguage(lang){ const isSpanish=lang==="es"; contentEs.classList.toggle("active",isSpanish); contentEn.classList.toggle("active",!isSpanish); btnEs.classList.toggle("active",isSpanish); btnEn.classList.toggle("active",!isSpanish); document.documentElement.lang=lang; localStorage.setItem("portfolio-lang",lang); }
+  document.querySelectorAll(".folder-tab").forEach(button=>button.addEventListener("click",()=>{ const library=button.closest(".case-library"), folder=button.dataset.folder; library.querySelectorAll(".folder-tab").forEach(tab=>tab.classList.toggle("active",tab===button)); library.querySelectorAll(".case-card").forEach(card=>card.hidden=card.dataset.folder!==folder); }));
   btnEs.addEventListener("click",()=>setLanguage("es")); btnEn.addEventListener("click",()=>setLanguage("en")); setLanguage(localStorage.getItem("portfolio-lang")||"es"); document.getElementById("y").textContent=new Date().getFullYear();
 </script>
 </body>
