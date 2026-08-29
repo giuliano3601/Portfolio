@@ -37,6 +37,10 @@
     .project-media { margin-top:14px; display:grid; grid-template-columns:1fr; gap:10px; }
     .project-media img { width:100%; display:block; border:1px solid var(--line); border-radius:10px; background:#fff; }
     .project-media .caption { color:var(--muted); font-size:12px; line-height:1.4; margin-top:-2px; }
+    .showcase { display:grid; gap:18px; align-items:start; }
+    .showcase img { width:100%; display:block; border:1px solid var(--line); border-radius:10px; }
+    .showcase p { margin:0; }
+    @media (min-width:820px){ .showcase { grid-template-columns:minmax(0, .85fr) minmax(0, 1.15fr); } }
     .hr { height:1px; background:var(--line); margin:18px 0; }
     footer { margin-top:28px; color:var(--muted); font-size:13px; }
     .profile { display:flex; gap:18px; align-items:center; }
@@ -108,6 +112,13 @@
         <div class="tech-box"><strong>Estado del proyecto</strong><p>Diseño y documentación de ingeniería. La arquitectura fue desarrollada y especificada, pero no llegó a desplegarse físicamente durante mi participación.</p></div>
       </article>
 
+      <article class="card">
+        <div class="showcase">
+          <div><h2>Gestión de proyectos — seguimiento visual de obra</h2><p class="muted">Tablero Kanban para ordenar y dar visibilidad al avance de un proyecto, desde la documentación técnica y las aprobaciones hasta la preparación de compras.</p><h3>Qué permite gestionar</h3><ul><li>Descomponer el trabajo en etapas concretas y tareas accionables.</li><li>Priorizar entregables, aprobaciones y compras según su estado.</li><li>Hacer visible el avance para coordinar responsables y próximos pasos.</li></ul><div class="tech-box"><strong>Herramienta</strong><p>Odoo Projects, configurado para centralizar el seguimiento operativo del proyecto.</p></div></div>
+          <div><img src="./assets/tablero-gestion-proyectos.jpeg" alt="Tablero Kanban para el seguimiento de documentación técnica, aprobaciones y preparación de una obra" /><div class="caption">Vista de gestión visual del proyecto, organizada por etapas de trabajo.</div></div>
+        </div>
+      </article>
+
       <article class="card half"><h2>Sobre mí</h2><p class="muted">Me interesa entender cómo funcionan los sistemas reales dentro de una organización y ayudar a tomar decisiones mejores cuando no todo está claro. Trabajo cómodo en contextos imperfectos, donde hay que elegir qué medir, qué simplificar y qué aceptar como incertidumbre.</p><p class="muted">Uso herramientas de ingeniería cuando suman valor, pero mi foco no está en la herramienta, sino en el criterio: entender el problema, evaluar alternativas y diseñar soluciones que puedan sostenerse en la práctica.</p></article>
     </div>
   </div>
@@ -167,6 +178,13 @@
         <h3>What I did</h3><ul><li>Designed the end-to-end architecture from field sensors to ERP and dashboards.</li><li>Defined radar level, optical counting, and flow sensors together with NPN and RS-485/Modbus interfaces.</li><li>Specified AU915 LoRaWAN nodes, gateway, ChirpStack network server, MQTT, Node-RED, and REST API delivery.</li><li>Prepared technical requirements, compatibility criteria, and a commissioning procedure for future procurement and installation.</li></ul>
         <div class="architecture"><strong>Architecture:</strong> Sensors → AU915 LoRaWAN nodes → gateway → ChirpStack → MQTT → Node-RED → REST API → ERP / dashboards</div>
         <div class="tech-box"><strong>Project status</strong><p>Engineering design and documentation. The architecture was developed and specified, but it was not physically deployed during my participation.</p></div>
+      </article>
+
+      <article class="card">
+        <div class="showcase">
+          <div><h2>Project management — visual construction tracking</h2><p class="muted">Kanban board used to structure and make project progress visible, from technical documentation and approvals to procurement preparation.</p><h3>What it helps manage</h3><ul><li>Breaking work down into concrete stages and actionable tasks.</li><li>Prioritizing deliverables, approvals, and purchasing activities by status.</li><li>Making progress visible to coordinate stakeholders and next steps.</li></ul><div class="tech-box"><strong>Tool</strong><p>Odoo Projects, configured to centralize the project’s operational follow-up.</p></div></div>
+          <div><img src="./assets/tablero-gestion-proyectos.jpeg" alt="Kanban board for tracking technical documentation, approvals, and construction preparation" /><div class="caption">Visual project-management view, organized by work stages.</div></div>
+        </div>
       </article>
 
       <article class="card half"><h2>About me</h2><p class="muted">I am interested in understanding how real systems work inside organizations and in helping make better decisions when not everything is clear. I work comfortably in imperfect environments, where it is necessary to decide what to measure, what to simplify, and what uncertainty must be accepted.</p><p class="muted">I use engineering tools when they add value, but my focus is not the tool itself. It is judgment: understanding the problem, evaluating alternatives, and designing solutions that can actually be sustained in practice.</p></article>
