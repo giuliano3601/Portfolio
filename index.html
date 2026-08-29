@@ -7,9 +7,10 @@
   <style>
     :root { --bg:#0b0c10; --card:#111218; --text:#e9e9ef; --muted:#b6b6c6; --accent:#7aa2ff; --line:#23243a; }
     * { box-sizing:border-box; } body { margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }
-    .wrap { max-width:980px; margin:0 auto; padding:28px 18px 60px; } .topbar { display:flex; justify-content:flex-end; margin-bottom:18px; }
+    .wrap { max-width:980px; margin:0 auto; padding:28px 18px 60px; } .topbar { display:flex; justify-content:flex-end; align-items:center; gap:10px; margin-bottom:18px; }
     .lang-switch { display:flex; gap:8px; border:1px solid var(--line); border-radius:999px; padding:4px; background:var(--card); }
     .lang-switch button { border:none; background:transparent; color:var(--muted); padding:7px 12px; border-radius:999px; cursor:pointer; font-size:13px; }.lang-switch button.active { background:var(--accent); color:#0b0c10; font-weight:600; }
+    .linkedin { width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; color:var(--muted); background:var(--card); }.linkedin:hover { color:#fff; border-color:#0a66c2; background:#0a66c2; }.linkedin svg { width:16px; height:16px; fill:currentColor; }
     .profile { display:flex; gap:20px; align-items:center; }.avatar { width:168px; height:168px; border-radius:50%; object-fit:cover; border:1px solid var(--line); flex-shrink:0; }
     h1 { margin:0; font-size:28px; letter-spacing:.2px; } .intro { margin:8px 0 0; color:var(--muted); max-width:70ch; line-height:1.5; }
     .pillrow { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }.pill { border:1px solid var(--line); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; }
@@ -22,7 +23,7 @@
   </style>
 </head>
 <body><div class="wrap">
-  <div class="topbar"><div class="lang-switch"><button id="btn-es" class="active" type="button">ES</button><button id="btn-en" type="button">EN</button></div></div>
+  <div class="topbar"><a class="linkedin" href="https://www.linkedin.com/in/giuliano-dallagata/" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil de LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V8.99h3.56v11.46zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg></a><div class="lang-switch"><button id="btn-es" class="active" type="button">ES</button><button id="btn-en" type="button">EN</button></div></div>
   <main id="content-es" class="lang-content active">
     <header class="profile"><img src="./assets/foto-giuliano.png" alt="Giuliano Dall’Agata" class="avatar" /><div><h1>Giuliano Alessandro Dall’Agata</h1><p class="intro">Ingeniero Industrial por la Universidad Nacional de Tucumán, orientado a procesos, operaciones, automatización, IoT, logística y gestión de proyectos.</p><div class="pillrow"><span class="pill">Operaciones y procesos</span><span class="pill">Automatización e IoT</span><span class="pill">Logística</span><span class="pill">Gestión de proyectos</span><span class="pill">Mejora continua</span></div></div></header>
     <section class="projects"><h2>Recorrido de proyectos</h2><p>Una selección de proyectos que llevé a cabo.</p><div class="timeline">
