@@ -13,9 +13,10 @@
     .profile { display:flex; gap:18px; align-items:center; }.avatar { width:144px; height:144px; border-radius:50%; object-fit:cover; border:1px solid var(--line); flex-shrink:0; }
     h1 { margin:0; font-size:28px; letter-spacing:.2px; } .intro { margin:8px 0 0; color:var(--muted); max-width:70ch; line-height:1.5; }
     .pillrow { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }.pill { border:1px solid var(--line); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; }
-    .projects { margin-top:42px; }.projects h2 { margin:0 0 8px; font-size:20px; }.projects > p { margin:0 0 16px; color:var(--muted); }
-    .project-list { display:grid; gap:10px; }.project-link { display:block; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card); color:var(--text); text-decoration:none; transition:background .15s,border-color .15s,transform .15s; }
-    .project-link:hover { background:#171925; border-color:var(--accent); transform:translateY(-1px); }.project-link h3 { margin:0; font-size:20px; line-height:1.25; }.project-link p { margin:7px 0 0; color:var(--muted); line-height:1.45; }.arrow { color:var(--accent); float:right; margin-left:16px; }
+    .projects { margin-top:42px; }.projects h2 { margin:0 0 8px; font-size:20px; }.projects > p { margin:0 0 20px; color:var(--muted); }
+    .timeline { position:relative; display:grid; gap:14px; padding-left:34px; }.timeline::before { content:""; position:absolute; left:10px; top:12px; bottom:12px; width:1px; background:var(--line); }
+    .project-link { position:relative; display:block; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card); color:var(--text); text-decoration:none; transition:background .15s,border-color .15s,transform .15s; }
+    .project-link::before { content:""; position:absolute; width:11px; height:11px; left:-30px; top:26px; border-radius:50%; border:2px solid var(--accent); background:var(--bg); }.project-link:hover { background:#171925; border-color:var(--accent); transform:translateY(-1px); }.project-link h3 { margin:0; font-size:21px; line-height:1.25; }.project-link p { margin:7px 0 0; color:var(--muted); line-height:1.45; }.project-number { color:var(--accent); font-size:13px; margin-bottom:7px; }.arrow { color:var(--accent); float:right; margin-left:16px; }
     .lang-content { display:none; }.lang-content.active { display:block; } footer { margin-top:30px; color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:18px; }
     @media (max-width:620px){ .profile { align-items:flex-start; }.avatar { width:90px; height:90px; } h1 { font-size:24px; }.project-link h3 { font-size:18px; } }
   </style>
@@ -23,23 +24,23 @@
 <body><div class="wrap">
   <div class="topbar"><div class="lang-switch"><button id="btn-es" class="active" type="button">ES</button><button id="btn-en" type="button">EN</button></div></div>
   <main id="content-es" class="lang-content active">
-    <header class="profile"><img src="./assets/foto-giuliano.png" alt="Giuliano Dall’Agata" class="avatar" /><div><h1>Giuliano Alessandro Dall’Agata</h1><p class="intro">Soy Ingeniero Industrial (UNT). Me gusta entender qué está trabando una operación y ayudar a ordenar el trabajo: tiempos, procesos, logística, automatización y herramientas de gestión.</p><div class="pillrow"><span class="pill">Operaciones y procesos</span><span class="pill">Mejora continua</span><span class="pill">Logística</span><span class="pill">Automatización</span><span class="pill">Análisis para decidir</span></div></div></header>
-    <section class="projects"><h2>Proyectos</h2><p>Algunos trabajos en los que participé.</p><div class="project-list">
-      <a class="project-link" href="./projects/deposito.html"><span class="arrow">→</span><h3>Depósito de producto terminado</h3><p>Tiempos, horas extra y organización diaria del trabajo.</p></a>
-      <a class="project-link" href="./projects/veleria.html"><span class="arrow">→</span><h3>Velería</h3><p>Capacidad, scrap y mejoras posibles en planta.</p></a>
-      <a class="project-link" href="./projects/tesis-deposito.html"><span class="arrow">→</span><h3>Proyecto de graduación</h3><p>Simulación de un depósito y mejora del layout.</p></a>
-      <a class="project-link" href="./projects/iiot.html"><span class="arrow">→</span><h3>Automatización industrial — IIoT con LoRaWAN</h3><p>Una forma de llevar datos de planta al ERP.</p></a>
-      <a class="project-link" href="./projects/odoo.html"><span class="arrow">→</span><h3>Implementación integral de Odoo</h3><p>Un sistema para reunir la gestión comercial, operativa y de proyectos.</p></a>
+    <header class="profile"><img src="./assets/foto-giuliano.png" alt="Giuliano Dall’Agata" class="avatar" /><div><h1>Giuliano Alessandro Dall’Agata</h1><p class="intro">Ingeniero Industrial por la Universidad Nacional de Tucumán, orientado a procesos, operaciones, automatización, IoT, logística y gestión de proyectos.</p><div class="pillrow"><span class="pill">Operaciones y procesos</span><span class="pill">Automatización e IoT</span><span class="pill">Logística</span><span class="pill">Gestión de proyectos</span><span class="pill">Mejora continua</span></div></div></header>
+    <section class="projects"><h2>Recorrido de proyectos</h2><p>Una selección de proyectos que llevé a cabo.</p><div class="timeline">
+      <a class="project-link" href="./projects/deposito.html"><span class="arrow">→</span><div class="project-number">01</div><h3>Depósito de producto terminado</h3><p>Tiempos, horas extra y organización diaria del trabajo.</p></a>
+      <a class="project-link" href="./projects/veleria.html"><span class="arrow">→</span><div class="project-number">02</div><h3>Velería</h3><p>Capacidad, scrap y mejoras posibles en planta.</p></a>
+      <a class="project-link" href="./projects/tesis-deposito.html"><span class="arrow">→</span><div class="project-number">03</div><h3>Proyecto de graduación</h3><p>Simulación de un depósito y mejora del layout.</p></a>
+      <a class="project-link" href="./projects/iiot.html"><span class="arrow">→</span><div class="project-number">04</div><h3>Automatización industrial — IIoT con LoRaWAN</h3><p>Una forma de llevar datos de planta al ERP.</p></a>
+      <a class="project-link" href="./projects/odoo.html"><span class="arrow">→</span><div class="project-number">05</div><h3>Implementación integral de Odoo</h3><p>Implementación para una empresa de construcción: gestión comercial, operativa y de proyectos en un solo lugar.</p></a>
     </div></section>
   </main>
   <main id="content-en" class="lang-content">
-    <header class="profile"><img src="./assets/foto-giuliano.png" alt="Giuliano Dall’Agata" class="avatar" /><div><h1>Giuliano Alessandro Dall’Agata</h1><p class="intro">I’m an Industrial Engineer (UNT). I like getting to the bottom of what is slowing an operation down and helping teams organize their work: time studies, processes, logistics, automation, and management tools.</p><div class="pillrow"><span class="pill">Operations and processes</span><span class="pill">Continuous improvement</span><span class="pill">Logistics</span><span class="pill">Automation</span><span class="pill">Decision-making</span></div></div></header>
-    <section class="projects"><h2>Projects</h2><p>A few projects I have worked on.</p><div class="project-list">
-      <a class="project-link" href="./projects/deposito.html"><span class="arrow">→</span><h3>Finished goods warehouse</h3><p>Time studies, overtime, and daily work organization.</p></a>
-      <a class="project-link" href="./projects/veleria.html"><span class="arrow">→</span><h3>Candle production area</h3><p>Capacity, scrap, and practical plant improvements.</p></a>
-      <a class="project-link" href="./projects/tesis-deposito.html"><span class="arrow">→</span><h3>Graduation project</h3><p>Warehouse simulation and layout improvement.</p></a>
-      <a class="project-link" href="./projects/iiot.html"><span class="arrow">→</span><h3>Industrial automation — IIoT with LoRaWAN</h3><p>A way to move plant data into the ERP.</p></a>
-      <a class="project-link" href="./projects/odoo.html"><span class="arrow">→</span><h3>End-to-end Odoo implementation</h3><p>One system for commercial, operational, and project management.</p></a>
+    <header class="profile"><img src="./assets/foto-giuliano.png" alt="Giuliano Dall’Agata" class="avatar" /><div><h1>Giuliano Alessandro Dall’Agata</h1><p class="intro">Industrial Engineer from the National University of Tucumán, with interests in processes, operations, automation, IoT, logistics, and project management.</p><div class="pillrow"><span class="pill">Operations and processes</span><span class="pill">Automation &amp; IoT</span><span class="pill">Logistics</span><span class="pill">Project management</span><span class="pill">Continuous improvement</span></div></div></header>
+    <section class="projects"><h2>Project journey</h2><p>A selection of projects I carried out.</p><div class="timeline">
+      <a class="project-link" href="./projects/deposito.html"><span class="arrow">→</span><div class="project-number">01</div><h3>Finished goods warehouse</h3><p>Time studies, overtime, and daily work organization.</p></a>
+      <a class="project-link" href="./projects/veleria.html"><span class="arrow">→</span><div class="project-number">02</div><h3>Candle production area</h3><p>Capacity, scrap, and practical plant improvements.</p></a>
+      <a class="project-link" href="./projects/tesis-deposito.html"><span class="arrow">→</span><div class="project-number">03</div><h3>Graduation project</h3><p>Warehouse simulation and layout improvement.</p></a>
+      <a class="project-link" href="./projects/iiot.html"><span class="arrow">→</span><div class="project-number">04</div><h3>Industrial automation — IIoT with LoRaWAN</h3><p>A way to move plant data into the ERP.</p></a>
+      <a class="project-link" href="./projects/odoo.html"><span class="arrow">→</span><div class="project-number">05</div><h3>End-to-end Odoo implementation</h3><p>Implementation for a construction company: commercial, operational, and project management in one place.</p></a>
     </div></section>
   </main>
   <footer>© <span id="y"></span> — Portfolio de Giuliano Dall’Agata</footer>
